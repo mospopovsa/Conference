@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>AI-Native School (April 25, 2026) | Stembridge School, Vilnius</title>
+  <meta name="description" content="A one-day, school-led conference in Vilnius on how AI is changing teaching, learning, and assessment — with roundtables for parents, teachers, and school leaders plus hands-on EdTech demos."/>
+  <meta property="og:title" content="AI-Native School: Navigating the Present, Designing the Future"/>
+  <meta property="og:description" content="One-day conference • Vilnius • Apr 25, 2026 • Schools • Government • EdTech • Parents"/>
+  <meta property="og:image" content="https://static.tildacdn.net/tild3934-3465-4661-b735-323836353162/photo.png"/>
+  <link rel="icon" href="https://static.tildacdn.net/tild6437-6665-4961-b166-323766623037/favicon.ico"/>
+  <style>
+    :root{
+      --bg:#000409;
+      --bg2:#061527;
+      --text:#eaf2ff;
+      --muted:#b7c5dd;
+      --line:#103146;
+      --accent:#69ffc1;
+      --accent2:#b7d4ff;
+      --card:rgba(16,49,70,.55);
+      --shadow: 0 20px 60px rgba(0,0,0,.45);
+      --radius: 18px;
+      --radius2: 28px;
+      --max: 1120px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background: radial-gradient(1200px 800px at 10% 10%, rgba(105,255,193,.12), transparent 60%),
+                  radial-gradient(900px 700px at 90% 30%, rgba(183,212,255,.10), transparent 55%),
+                  linear-gradient(180deg, var(--bg) 0%, #020a12 40%, #020a12 100%);
+      line-height:1.35;
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:0 22px;}
+    .pill{
+      display:inline-flex; gap:10px; align-items:center;
+      padding:8px 12px; border:1px solid rgba(183,212,255,.25);
+      border-radius:999px; color:var(--accent2);
+      backdrop-filter: blur(8px);
+      background: rgba(0,4,9,.35);
+      font-weight:650;
+      letter-spacing:.2px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+    }
+    .nav{
+      position:sticky; top:0; z-index:40;
+      background: rgba(0,4,9,.55);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid rgba(16,49,70,.55);
+    }
+    .navin{display:flex; align-items:center; justify-content:space-between; padding:14px 0;}
+    .brand{display:flex; gap:10px; align-items:center; text-decoration:none;}
+    .brand img{width:34px; height:34px; border-radius:8px}
+    .brand strong{font-size:14px; letter-spacing:.6px; text-transform:uppercase}
+    .navlinks{display:flex; gap:16px; align-items:center}
+    .navlinks a{opacity:.88; text-decoration:none; font-weight:600; font-size:14px}
+    .navlinks a:hover{opacity:1}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:12px 16px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,.25);
+      background: rgba(183,212,255,.18);
+      color:var(--text);
+      font-weight:750;
+      text-decoration:none;
+      box-shadow: 0 12px 30px rgba(0,0,0,.25);
+      transition: transform .15s ease, background .15s ease, border-color .15s ease, opacity .15s ease;
+      cursor:pointer;
+    }
+    .btn:hover{transform: translateY(-1px); background: rgba(183,212,255,.26); border-color: rgba(255,255,255,.36);}
+    .btn.primary{
+      background: linear-gradient(90deg, rgba(105,255,193,.18), rgba(183,212,255,.18));
+      border-color: rgba(105,255,193,.45);
+    }
+    .btn.primary .dot{
+      width:10px; height:10px; border-radius:999px; background:var(--accent);
+      box-shadow: 0 0 0 4px rgba(105,255,193,.12);
+      margin-right:10px;
+    }
+    .hero{
+      position:relative;
+      min-height: 62vh;
+      display:flex;
+      align-items:flex-end;
+      padding: 42px 0 44px;
+      overflow:hidden;
+      border-bottom:1px solid rgba(16,49,70,.55);
+    }
+    .hero::before{
+      content:"";
+      position:absolute; inset:-2px;
+      background:
+        linear-gradient(180deg, rgba(3,9,25,.30), rgba(4,10,29,.88)),
+        url("https://static.tildacdn.net/tild6465-3639-4239-b731-646465633865/freepik__35mm-film-p.png");
+      background-size: cover;
+      background-position: center;
+      filter:saturate(.95) contrast(1.05);
+      transform: scale(1.03);
+      z-index:-2;
+    }
+    .hero::after{
+      content:"";
+      position:absolute; inset:0;
+      background:
+        radial-gradient(700px 350px at 15% 25%, rgba(105,255,193,.18), transparent 65%),
+        radial-gradient(560px 280px at 80% 50%, rgba(183,212,255,.14), transparent 65%);
+      z-index:-1;
+      pointer-events:none;
+    }
+    .herogrid{display:grid; grid-template-columns: 1.2fr .8fr; gap:24px; align-items:end;}
+    h1{
+      margin:14px 0 14px;
+      font-size: clamp(38px, 5vw, 62px);
+      letter-spacing:.7px;
+      text-transform:uppercase;
+      line-height:1.02;
+    }
+    h1 .accent{color:var(--accent)}
+    .sub{
+      font-size: clamp(16px, 1.8vw, 20px);
+      color: rgba(234,242,255,.92);
+      max-width: 54ch;
+    }
+    .heroactions{display:flex; gap:12px; flex-wrap:wrap; margin-top:18px;}
+    .card{
+      background: var(--card);
+      border:1px solid rgba(183,212,255,.16);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding:18px;
+      backdrop-filter: blur(10px);
+    }
+    .meta{display:grid; gap:12px;}
+    .meta .row{display:flex; gap:10px; align-items:flex-start;}
+    .k{font-weight:800; color:var(--accent2); min-width:86px}
+    .v{color:rgba(234,242,255,.92)}
+    .section{padding:54px 0;}
+    .section h2{
+      margin:0 0 10px;
+      font-size:28px;
+      letter-spacing:.2px;
+    }
+    .section p{margin:10px 0; color:var(--muted); font-size:16px}
+    .grid3{display:grid; grid-template-columns: repeat(3, 1fr); gap:16px; margin-top:16px}
+    .grid2{display:grid; grid-template-columns: repeat(2, 1fr); gap:16px; margin-top:16px}
+    .tag{
+      display:inline-flex; align-items:center; gap:10px;
+      font-weight:800;
+      margin-bottom:10px;
+    }
+    .tag .sq{width:10px; height:10px; border-radius:3px; background:var(--accent)}
+    ul{margin:10px 0 0 18px; color:rgba(234,242,255,.86)}
+    li{margin:6px 0}
+    .agenda{display:grid; gap:10px; margin-top:14px}
+    .slot{
+      display:grid; grid-template-columns: 92px 1fr; gap:14px;
+      padding:14px 14px;
+      border-radius:14px;
+      border:1px solid rgba(16,49,70,.75);
+      background: rgba(0,4,9,.35);
+    }
+    .time{font-weight:900; color:var(--accent2)}
+    .slot strong{display:block; margin-bottom:4px}
+    .small{font-size:13px; color:rgba(183,197,221,.92)}
+    .banner{
+      margin-top:18px;
+      display:flex; gap:14px; align-items:center; justify-content:space-between; flex-wrap:wrap;
+      background: linear-gradient(90deg, rgba(105,255,193,.12), rgba(183,212,255,.10));
+      border:1px solid rgba(105,255,193,.22);
+      border-radius: var(--radius2);
+      padding:16px 16px;
+    }
+    .banner b{color:var(--text)}
+    .foot{
+      padding:40px 0 56px;
+      border-top:1px solid rgba(16,49,70,.55);
+      color:rgba(183,197,221,.95);
+    }
+    .footgrid{display:grid; grid-template-columns: 1.2fr .8fr; gap:18px}
+    .miniimg{
+      width:100%;
+      border-radius: var(--radius);
+      border:1px solid rgba(183,212,255,.12);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      background: rgba(0,4,9,.35);
+    }
+    .miniimg img{width:100%; height:100%; object-fit:cover; display:block; opacity:.95}
+    /* Modal */
+    .modal{
+      position:fixed; inset:0; display:none; place-items:center;
+      background: rgba(0,0,0,.62);
+      z-index:80;
+      padding:18px;
+    }
+    .modal.open{display:grid;}
+    .modalbox{
+      width:min(640px, 100%);
+      border-radius: 18px;
+      border:1px solid rgba(183,212,255,.22);
+      background: rgba(0,4,9,.92);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .modalimg{
+      background:
+        linear-gradient(180deg, rgba(3,9,25,.25), rgba(4,10,29,.88)),
+        url("https://static.tildacdn.net/tild3063-3838-4237-b862-303634643434/freepik__35mm-film-p.png");
+      background-size: cover;
+      background-position:center;
+      min-height: 340px;
+    }
+    .modalcontent{padding:18px}
+    .modalcontent h3{margin:0 0 8px}
+    .x{
+      position:absolute; right:20px; top:18px;
+      width:42px; height:42px; border-radius:999px;
+      border:1px solid rgba(255,255,255,.22);
+      background: rgba(0,4,9,.65);
+      color:var(--text);
+      display:grid; place-items:center;
+      cursor:pointer;
+    }
+    .form{display:grid; gap:10px; margin-top:10px}
+    .in{
+      width:100%;
+      padding:12px 12px;
+      border-radius:12px;
+      border:1px solid rgba(183,212,255,.20);
+      background: rgba(16,49,70,.20);
+      color:var(--text);
+      outline:none;
+    }
+    .in::placeholder{color:rgba(183,197,221,.75)}
+    .note{font-size:12px; color:rgba(183,197,221,.88)}
+    @media (max-width: 860px){
+      .herogrid{grid-template-columns:1fr}
+      .grid3{grid-template-columns:1fr}
+      .grid2{grid-template-columns:1fr}
+      .footgrid{grid-template-columns:1fr}
+      .modalbox{grid-template-columns:1fr}
+      .modalimg{display:none}
+      .navlinks a{display:none}
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap navin">
+      <a class="brand" href="#top" aria-label="Stembridge">
+        <img alt="Stembridge" src="https://static.tildacdn.net/tild3066-6263-4732-a531-363862323534/Logo-2_webpage_icon.png"/>
+        <div>
+          <strong>Stembridge</strong><div class="small">Vilnius, Lithuania</div>
+        </div>
+      </a>
+      <nav class="navlinks" aria-label="Navigation">
+        <a href="#why">Why this</a>
+        <a href="#format">Format</a>
+        <a href="#roundtables">Roundtables</a>
+        <a href="#agenda">Agenda</a>
+        <a href="#edtech">EdTech demos</a>
+      </nav>
+      <button class="btn primary" data-open-modal>
+        <span class="dot"></span>Apply / Join
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap herogrid">
+        <div>
+          <span class="pill">One-day conference • <b>Vilnius</b> • <b>April 25, 2026</b></span>
+          <h1><span class="accent">AI in School:</span> Practice, Dialogue & Real Implementation</h1>
+          <div class="sub">A practitioner‑led dialogue on what AI should look like in real schools — where it helps learning, where it fails, and what we need to change (assessment, teaching, governance) to make it work.</div>
+          <div class="heroactions">
+            <button class="btn primary" data-open-modal><span class="dot"></span>Apply to attend</button>
+            <a class="btn" href="#roundtables">See roundtables</a>
+            <a class="btn" href="#edtech">EdTech participation</a>
+          </div>
+        </div>
+
+        <aside class="card meta" aria-label="Event details">
+          <div class="row"><div class="k">Date</div><div class="v"><b>Saturday, April 25, 2026</b></div></div>
+          <div class="row"><div class="k">Time</div><div class="v">10:00–17:00 (doors 09:30)</div></div>
+          <div class="row"><div class="k">Place</div><div class="v">Stembridge School, Nemenčinės pl. 48, Vilnius 10104</div></div>
+          <div class="row"><div class="k">Audience</div><div class="v">School leaders & teachers • Parents • EdTech • Government</div></div>
+          <div class="row"><div class="k">Language</div><div class="v">English + Lithuanian segments</div></div>
+          <div class="row"><div class="k">Goal</div><div class="v">Make AI in schools less hype, more learning science & practice.</div></div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="why" class="section">
+      <div class="wrap">
+        <h2>Why we’re doing this</h2>
+        <p>AI is already in students’ pockets and classrooms — whether schools are ready or not. The real question is not “AI or not ”, but <b>what role AI should play</b> so it strengthens education rather than undermines it.</p>
+
+        <div class="grid3">
+          <div class="card">
+            <div class="tag"><span class="sq"></span>Evidence over hype</div>
+            <p>We focus on what has been tried in real schools: what worked, what didn’t, and what needs better evaluation.</p>
+          </div>
+          <div class="card">
+            <div class="tag"><span class="sq"></span>Teacher‑centred change</div>
+            <p>AI changes workflows, attention, assessment, and classroom culture. We want honest conversations about teacher roles, fears, and new skills.</p>
+          </div>
+          <div class="card">
+            <div class="tag"><span class="sq"></span>Governance & trust</div>
+            <p>Data protection, student safety, fairness, and regulation (EU + national) are part of the design — not an afterthought.</p>
+          </div>
+        </div>
+
+        <div class="banner">
+          <div><b>Want to contribute as a speaker/panelist?</b><div class="small">We welcome researchers, school leaders, teacher‑practitioners, and policy voices.</div></div>
+          <button class="btn primary" data-open-modal><span class="dot"></span>Apply / propose a topic</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="format" class="section">
+      <div class="wrap">
+        <h2>Format</h2>
+        <p>One concentrated day, designed to generate real conversations and actionable contacts for schools, teachers, parents, and EdTech teams.</p>
+
+        <div class="grid2">
+          <div class="card">
+            <div class="tag"><span class="sq"></span>Keynote + panels</div>
+            <ul>
+              <li>AI-supported learning and its real impact on outcomes</li>
+              <li>Assessment and academic integrity in the generative AI age</li>
+              <li>The changing role of the teacher</li>
+              <li>Responsible implementation at school and system level</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="tag"><span class="sq"></span>Roundtables + demos</div>
+            <ul>
+              <li>4 parallel roundtables (parents / teachers / school leaders / EdTech)</li>
+              <li>EdTech demo stations with timed slots for hands‑on trials</li>
+              <li>Structured networking (intro prompts + contact exchange)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="roundtables" class="section">
+      <div class="wrap">
+        <h2>Roundtables (small groups)</h2>
+        <p>Each roundtable is moderated, capped (to keep it real), and produces a 1‑page “what we learned” summary shared with all participants.</p>
+
+        <div class="grid2">
+          <div class="card">
+            <div class="tag"><span class="sq"></span>Parents</div>
+            <b>Homework with AI: helpful or harmful?</b>
+            <ul>
+              <li>Where AI helps practice vs replaces thinking</li>
+              <li>What to ask kids / how to spot shallow understanding</li>
+              <li>Family rules that reduce conflict and cheating</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="tag"><span class="sq"></span>Teachers</div>
+            <b>AI‑Supported Teaching: how is the role of teachers changing?</b>
+            <ul>
+              <li>New routines: feedback, scaffolding, tutoring</li>
+              <li>Teacher fears: loss of control, workload, trust</li>
+              <li>What teacher training should look like in 2026</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="tag"><span class="sq"></span>School leaders</div>
+            <b>Freedom to innovate: managing the risks and benefits of AI</b>
+            <ul>
+              <li>Guardrails: tools, policies, data and privacy</li>
+              <li>When to pilot, when to scale, when to stop</li>
+              <li>How to communicate with parents and regulators</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="tag"><span class="sq"></span>EdTech startups</div>
+            <b>From pilot to procurement: what schools actually need to adopt AI</b>
+            <ul>
+              <li>What evidence schools will accept (and why)</li>
+              <li>Implementation realities: training, support, integration</li>
+              <li>How to design pilots that lead to adoption in the Baltics</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="agenda" class="section">
+      <div class="wrap">
+        <h2>Draft agenda (10:00–17:00)</h2>
+        <p>Times are indicative. The final version depends on speakers and participating schools.</p>
+
+        <div class="agenda">
+          <div class="slot"><div class="time">09:30</div><div><strong>Arrival & coffee</strong></div></div>
+          <div class="slot"><div class="time">10:00</div><div><strong>Opening</strong></div></div>
+          <div class="slot"><div class="time">10:15</div><div><strong>Keynote and Panels #1</strong></div></div>
+          <div class="slot"><div class="time">12:00</div><div><strong>EdTech demo block</strong></div></div>
+          <div class="slot"><div class="time">13:00</div><div><strong>Lunch</strong></div></div>
+          <div class="slot"><div class="time">14:00</div><div><strong>Keynote and Panels #2</strong></div></div>
+          <div class="slot"><div class="time">15:30</div><div><strong>Roundtables (parallel, 60 min)</strong></div></div>
+          <div class="slot"><div class="time">16:30</div><div><strong>Closing: what we learned + next steps</strong></div></div>
+          <div class="slot"><div class="time">17:00</div><div><strong>End</strong></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="edtech" class="section">
+      <div class="wrap">
+        <h2>EdTech startups: how to participate</h2>
+        <p>We’re inviting EdTech innovators at every stage — from emerging startups to established growth companies — to present their solutions and engage in meaningful dialogue about what schools in the Baltics actually need to adopt AI responsibly and at scale.</p>
+
+        <div class="grid2">
+          <div class="card">
+            <div class="tag"><span class="sq"></span>Demo stations</div>
+            <p><b>Dedicated time slots</b> where participants can try your product hands‑on (laptops provided by startups; tables + power by organizers).</p>
+            <ul>
+              <li>Short “what problem you solve” intro (2 min)</li>
+              <li>10–12 min guided demo</li>
+              <li>QR feedback form from participants</li>
+            </ul>
+          </div>
+          <div class="card">
+            <div class="tag"><span class="sq"></span>EdTech roundtable</div>
+            <p>A moderated discussion on <b>pilots, evidence, school procurement</b>, and what it takes to scale in real school environments.</p>
+            <ul>
+              <li>Share your pilot design</li>
+              <li>Hear friction points from schools</li>
+              <li>Meet potential partners</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="banner">
+          <div><b>EdTech teams:</b> apply for a demo station or the roundtable.<div class="small">We will confirm slots and practical requirements by email.</div></div>
+          <button class="btn primary" data-open-modal><span class="dot"></span>Apply as EdTech</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap footgrid">
+        <div>
+          <h2>About Stembridge</h2>
+          <p>Stembridge is a private school in Vilnius. We’re building “AI‑native” learning routines and want to test them responsibly — with teachers, parents, and regulators in the room.</p>
+          <div class="heroactions" style="margin-top:14px">
+            <button class="btn primary" data-open-modal><span class="dot"></span>Register / contact</button>
+            <a class="btn" href="mailto:hello@stembridge.lt">Email: hello@stembridge.lt</a>
+          </div>
+        </div>
+        <div class="miniimg" aria-label="School image">
+          <img alt="Stembridge photo" src="https://static.tildacdn.net/tild3932-6662-4061-b762-326532623132/IMG_1429.JPEG"/>
+        </div>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <div class="wrap">
+        <div class="small">© Stembridge School • Vilnius • AI‑Native School • April 25, 2026</div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Modal -->
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Registration form">
+    <button class="x" aria-label="Close" data-close-modal>✕</button>
+    <div class="modalbox" role="document">
+      <div class="modalimg" aria-hidden="true"></div>
+      <div class="modalcontent">
+        <h3>Register interest</h3>
+        <div class="small">Tell us who you are and how you’d like to participate (attendee / speaker / EdTech).</div>
+
+        <form class="form" onsubmit="return submitForm(event)">
+          <input class="in" name="name" placeholder="Name" required/>
+          <input class="in" type="email" name="email" placeholder="Email" required/>
+          <input class="in" name="org" placeholder="School / company / role"/>
+          <select class="in" name="track">
+            <option value="attendee">I want to attend</option>
+            <option value="speaker">I want to speak / join a panel</option>
+            <option value="edtech">We are an EdTech startup</option>
+            <option value="partner">I might support / partner</option>
+          </select>
+          <textarea class="in" name="msg" rows="4" placeholder="Optional: what topic or what you’d like to demo"></textarea>
+          <button class="btn primary" type="submit"><span class="dot"></span>Send</button>
+          <div class="note">This demo form stores nothing. Replace <code>submitForm()</code> with your CRM / Google Form / Tilda form endpoint.</div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById('modal');
+    function openModal(){ modal.classList.add('open'); document.body.style.overflow='hidden'; }
+    function closeModal(){ modal.classList.remove('open'); document.body.style.overflow=''; }
+
+    document.querySelectorAll('[data-open-modal]').forEach(b => b.addEventListener('click', openModal));
+    document.querySelectorAll('[data-close-modal]').forEach(b => b.addEventListener('click', closeModal));
+    modal.addEventListener('click', (e)=>{ if(e.target === modal) closeModal(); });
+    document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeModal(); });
+
+    function submitForm(e){
+      e.preventDefault();
+      const fd = new FormData(e.target);
+      const payload = Object.fromEntries(fd.entries());
+      // Replace the line below with your submission logic.
+      alert("Thanks! We'll get back to you shortly.\n\n" + JSON.stringify(payload, null, 2));
+      e.target.reset();
+      closeModal();
+      return false;
+    }
+  </script>
+</body>
+</html>
