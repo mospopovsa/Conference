@@ -1,525 +1,467 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>AI-Native School (April 25, 2026) | Stembridge School, Vilnius</title>
-  <meta name="description" content="A one-day, school-led conference in Vilnius on how AI is changing teaching, learning, and assessment — with roundtables for parents, teachers, and school leaders plus hands-on EdTech demos."/>
-  <meta property="og:title" content="AI-Native School: Navigating the Present, Designing the Future"/>
-  <meta property="og:description" content="One-day conference • Vilnius • Apr 25, 2026 • Schools • Government • EdTech • Parents"/>
-  <meta property="og:image" content="https://static.tildacdn.net/tild3934-3465-4661-b735-323836353162/photo.png"/>
-  <link rel="icon" href="https://static.tildacdn.net/tild6437-6665-4961-b166-323766623037/favicon.ico"/>
-  <style>
-    :root{
-      --bg:#000409;
-      --bg2:#061527;
-      --text:#eaf2ff;
-      --muted:#b7c5dd;
-      --line:#103146;
-      --accent:#69ffc1;
-      --accent2:#b7d4ff;
-      --card:rgba(16,49,70,.55);
-      --shadow: 0 20px 60px rgba(0,0,0,.45);
-      --radius: 18px;
-      --radius2: 28px;
-      --max: 1120px;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      color:var(--text);
-      background: radial-gradient(1200px 800px at 10% 10%, rgba(105,255,193,.12), transparent 60%),
-                  radial-gradient(900px 700px at 90% 30%, rgba(183,212,255,.10), transparent 55%),
-                  linear-gradient(180deg, var(--bg) 0%, #020a12 40%, #020a12 100%);
-      line-height:1.35;
-    }
-    a{color:inherit}
-    .wrap{max-width:var(--max); margin:0 auto; padding:0 22px;}
-    .pill{
-      display:inline-flex; gap:10px; align-items:center;
-      padding:8px 12px; border:1px solid rgba(183,212,255,.25);
-      border-radius:999px; color:var(--accent2);
-      backdrop-filter: blur(8px);
-      background: rgba(0,4,9,.35);
-      font-weight:650;
-      letter-spacing:.2px;
-      box-shadow: 0 10px 30px rgba(0,0,0,.25);
-    }
-    .nav{
-      position:sticky; top:0; z-index:40;
-      background: rgba(0,4,9,.55);
-      backdrop-filter: blur(10px);
-      border-bottom:1px solid rgba(16,49,70,.55);
-    }
-    .navin{display:flex; align-items:center; justify-content:space-between; padding:14px 0;}
-    .brand{display:flex; gap:10px; align-items:center; text-decoration:none;}
-    .brand img{width:34px; height:34px; border-radius:8px}
-    .brand strong{font-size:14px; letter-spacing:.6px; text-transform:uppercase}
-    .navlinks{display:flex; gap:16px; align-items:center}
-    .navlinks a{opacity:.88; text-decoration:none; font-weight:600; font-size:14px}
-    .navlinks a:hover{opacity:1}
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      padding:12px 16px;
-      border-radius:12px;
-      border:1px solid rgba(255,255,255,.25);
-      background: rgba(183,212,255,.18);
-      color:var(--text);
-      font-weight:750;
-      text-decoration:none;
-      box-shadow: 0 12px 30px rgba(0,0,0,.25);
-      transition: transform .15s ease, background .15s ease, border-color .15s ease, opacity .15s ease;
-      cursor:pointer;
-    }
-    .btn:hover{transform: translateY(-1px); background: rgba(183,212,255,.26); border-color: rgba(255,255,255,.36);}
-    .btn.primary{
-      background: linear-gradient(90deg, rgba(105,255,193,.18), rgba(183,212,255,.18));
-      border-color: rgba(105,255,193,.45);
-    }
-    .btn.primary .dot{
-      width:10px; height:10px; border-radius:999px; background:var(--accent);
-      box-shadow: 0 0 0 4px rgba(105,255,193,.12);
-      margin-right:10px;
-    }
-    .hero{
-      position:relative;
-      min-height: 62vh;
-      display:flex;
-      align-items:flex-end;
-      padding: 42px 0 44px;
-      overflow:hidden;
-      border-bottom:1px solid rgba(16,49,70,.55);
-    }
-    .hero::before{
-      content:"";
-      position:absolute; inset:-2px;
-      background:
-        linear-gradient(180deg, rgba(3,9,25,.30), rgba(4,10,29,.88)),
-        url("https://static.tildacdn.net/tild6465-3639-4239-b731-646465633865/freepik__35mm-film-p.png");
-      background-size: cover;
-      background-position: center;
-      filter:saturate(.95) contrast(1.05);
-      transform: scale(1.03);
-      z-index:-2;
-    }
-    .hero::after{
-      content:"";
-      position:absolute; inset:0;
-      background:
-        radial-gradient(700px 350px at 15% 25%, rgba(105,255,193,.18), transparent 65%),
-        radial-gradient(560px 280px at 80% 50%, rgba(183,212,255,.14), transparent 65%);
-      z-index:-1;
-      pointer-events:none;
-    }
-    .herogrid{display:grid; grid-template-columns: 1.2fr .8fr; gap:24px; align-items:end;}
-    h1{
-      margin:14px 0 14px;
-      font-size: clamp(38px, 5vw, 62px);
-      letter-spacing:.7px;
-      text-transform:uppercase;
-      line-height:1.02;
-    }
-    h1 .accent{color:var(--accent)}
-    .sub{
-      font-size: clamp(16px, 1.8vw, 20px);
-      color: rgba(234,242,255,.92);
-      max-width: 54ch;
-    }
-    .heroactions{display:flex; gap:12px; flex-wrap:wrap; margin-top:18px;}
-    .card{
-      background: var(--card);
-      border:1px solid rgba(183,212,255,.16);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding:18px;
-      backdrop-filter: blur(10px);
-    }
-    .meta{display:grid; gap:12px;}
-    .meta .row{display:flex; gap:10px; align-items:flex-start;}
-    .k{font-weight:800; color:var(--accent2); min-width:86px}
-    .v{color:rgba(234,242,255,.92)}
-    .section{padding:54px 0;}
-    .section h2{
-      margin:0 0 10px;
-      font-size:28px;
-      letter-spacing:.2px;
-    }
-    .section p{margin:10px 0; color:var(--muted); font-size:16px}
-    .grid3{display:grid; grid-template-columns: repeat(3, 1fr); gap:16px; margin-top:16px}
-    .grid2{display:grid; grid-template-columns: repeat(2, 1fr); gap:16px; margin-top:16px}
-    .tag{
-      display:inline-flex; align-items:center; gap:10px;
-      font-weight:800;
-      margin-bottom:10px;
-    }
-    .tag .sq{width:10px; height:10px; border-radius:3px; background:var(--accent)}
-    ul{margin:10px 0 0 18px; color:rgba(234,242,255,.86)}
-    li{margin:6px 0}
-    .agenda{display:grid; gap:5px; margin-top:10px}
-    .slot{
-      display:grid; grid-template-columns: 92px 1fr; gap:14px;
-      padding:10px 10px;
-      border-radius:14px;
-      border:1px solid rgba(16,49,70,.75);
-      background: rgba(0,4,9,.35);
-    }
-    .time{font-weight:900; color:var(--accent2)}
-    .slot strong{display:block; margin-bottom:4px}
-    .small{font-size:13px; color:rgba(183,197,221,.92)}
-    .banner{
-      margin-top:18px;
-      display:flex; gap:14px; align-items:center; justify-content:space-between; flex-wrap:wrap;
-      background: linear-gradient(90deg, rgba(105,255,193,.12), rgba(183,212,255,.10));
-      border:1px solid rgba(105,255,193,.22);
-      border-radius: var(--radius2);
-      padding:16px 16px;
-    }
-    .banner b{color:var(--text)}
-    .foot{
-      padding:40px 0 56px;
-      border-top:1px solid rgba(16,49,70,.55);
-      color:rgba(183,197,221,.95);
-    }
-    .footgrid{display:grid; grid-template-columns: 1.2fr .8fr; gap:18px}
-    .miniimg{
-      width:100%;
-      border-radius: var(--radius);
-      border:1px solid rgba(183,212,255,.12);
-      box-shadow: var(--shadow);
-      overflow:hidden;
-      background: rgba(0,4,9,.35);
-    }
-    .miniimg img{width:100%; height:100%; object-fit:cover; display:block; opacity:.95}
-    /* Modal */
-    .modal{
-      position:fixed; inset:0; display:none; place-items:center;
-      background: rgba(0,0,0,.62);
-      z-index:80;
-      padding:18px;
-    }
-    .modal.open{display:grid;}
-    .modalbox{
-      width:min(640px, 100%);
-      border-radius: 18px;
-      border:1px solid rgba(183,212,255,.22);
-      background: rgba(0,4,9,.92);
-      box-shadow: var(--shadow);
-      overflow:hidden;
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-    }
-    .modalimg{
-      background:
-        linear-gradient(180deg, rgba(3,9,25,.25), rgba(4,10,29,.88)),
-        url("https://static.tildacdn.net/tild3063-3838-4237-b862-303634643434/freepik__35mm-film-p.png");
-      background-size: cover;
-      background-position:center;
-      min-height: 340px;
-    }
-    .modalcontent{padding:18px}
-    .modalcontent h3{margin:0 0 8px}
-    .x{
-      position:absolute; right:20px; top:18px;
-      width:42px; height:42px; border-radius:999px;
-      border:1px solid rgba(255,255,255,.22);
-      background: rgba(0,4,9,.65);
-      color:var(--text);
-      display:grid; place-items:center;
-      cursor:pointer;
-    }
-    .form{display:grid; gap:10px; margin-top:10px}
-    .in{
-      width:100%;
-      padding:12px 12px;
-      border-radius:12px;
-      border:1px solid rgba(183,212,255,.20);
-      background: rgba(16,49,70,.20);
-      color:var(--text);
-      outline:none;
-    }
-    .in::placeholder{color:rgba(183,197,221,.75)}
-    .note{font-size:12px; color:rgba(183,197,221,.88)}
-    @media (max-width: 860px){
-      .herogrid{grid-template-columns:1fr}
-      .grid3{grid-template-columns:1fr}
-      .grid2{grid-template-columns:1fr}
-      .footgrid{grid-template-columns:1fr}
-      .modalbox{grid-template-columns:1fr}
-      .modalimg{display:none}
-      .navlinks a{display:none}
-    }
-  </style>
+<!DOCTYPE html>
+<html lang="ru" data-theme="dark" style="color-scheme: dark;"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Мамочке с днём рождения! :)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600&amp;family=Piazzolla:opsz,wght@8..30,400..600&amp;display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EEF2EA; --surface:#F8FAF6; --ink:#1E3328; --muted:#5F7066; --line:#C8D2C4;
+  --accent:#B98A1E; --accent-strong:#8F6A12; --danger:#A9432A; --ok:#2F7A4E;
+  --serif:"Piazzolla",Georgia,"Times New Roman",serif;
+  --sans:"Golos Text",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#121D17; --surface:#1A2820; --ink:#E6ECE3; --muted:#9EAFA3; --line:#2F4137;
+    --accent:#D9A93A; --accent-strong:#F0C25A; --danger:#E07A5F; --ok:#6CC08B;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#121D17; --surface:#1A2820; --ink:#E6ECE3; --muted:#9EAFA3; --line:#2F4137;
+  --accent:#D9A93A; --accent-strong:#F0C25A; --danger:#E07A5F; --ok:#6CC08B;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:400 1rem/1.5 var(--sans);min-height:100dvh;-webkit-font-smoothing:antialiased;font-optical-sizing:auto}
+#app{max-width:30rem;margin:0 auto;padding:max(1.5rem,env(safe-area-inset-top)) 1.25rem 3rem}
+.screen{display:flex;flex-direction:column;gap:1.5rem;min-height:calc(100dvh - 4.5rem)}
+.grow{flex:1}
+h1{font:600 2.2rem/1.1 var(--serif);margin:0;letter-spacing:-.01em}
+.intro,.lead{color:var(--muted);margin:.75rem 0 0;max-width:34em}
+.question{font:500 1.55rem/1.3 var(--serif);margin:0;max-width:26em}
+.progress{display:flex;flex-direction:column;gap:.5rem;font-size:.9rem;color:var(--muted)}
+.rail{display:flex;gap:4px}
+.rail i{flex:1;height:4px;border-radius:2px;background:var(--line)}
+.rail i.done{background:var(--accent)}
+.rail i.now{background:var(--ink)}
+details.hint{margin-top:1rem}
+details.hint summary{cursor:pointer;color:var(--muted);font-size:.95rem;width:max-content}
+details.hint p{margin:.5rem 0 0;color:var(--muted)}
+.entry{display:flex;flex-direction:column;gap:.6rem}
+.entry label{font-size:.9rem;color:var(--muted)}
+input,textarea{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:.5rem;padding:.7rem .8rem;width:100%;margin:0}
+textarea{resize:vertical}
+input:focus,textarea:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:transparent}
+.code-input{font:600 1.75rem/1.2 var(--sans);letter-spacing:.18em;text-align:center;padding:.8rem .5rem;border:0;border-bottom:3px solid var(--accent);border-radius:.5rem .5rem 0 0;text-transform:uppercase}
+.code-input:focus{outline:none;border-bottom-color:var(--accent-strong);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 28%,transparent)}
+.code-input.shake{animation:shake .5s}
+.msg{min-height:1.4em;margin:0;font-size:.95rem;color:var(--muted)}
+.msg.bad{color:var(--danger)}
+.ok{color:var(--ok);font-weight:500;margin:0}
+.btn{font:500 1.05rem var(--sans);padding:.9rem 1.25rem;border-radius:.6rem;border:1px solid transparent;cursor:pointer;width:100%}
+.btn:disabled{opacity:.6;cursor:default}
+.btn-primary{background:var(--ink);color:var(--bg)}
+.btn-secondary{background:transparent;border-color:var(--line);color:var(--ink)}
+.btn:focus-visible,.btn-link:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.btn-link{background:none;border:0;padding:0;color:var(--muted);text-decoration:underline;font:inherit;cursor:pointer}
+.foot{margin:auto 0 0;font-size:.9rem;color:var(--muted)}
+.foot a{color:inherit}
+.banner{background:var(--surface);border:1px dashed var(--accent);padding:.6rem .8rem;border-radius:.5rem;font-size:.9rem;margin:0}
+.banner a{color:inherit}
+.question a,.intro a,details.hint p a{color:var(--accent-strong);text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:.15em;overflow-wrap:anywhere}
+.reveal{animation:reveal .45s ease-out}
+@keyframes reveal{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@keyframes shake{10%,90%{transform:translateX(-2px)}20%,80%{transform:translateX(4px)}30%,50%,70%{transform:translateX(-6px)}40%,60%{transform:translateX(6px)}}
+@media (prefers-reduced-motion:reduce){.reveal,.code-input.shake{animation:none}}
+/* builder */
+.field{display:flex;flex-direction:column;gap:.35rem}
+.field span{font-size:.9rem;color:var(--muted)}
+.locs{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:1.25rem}
+.loc{border-left:3px solid var(--line);padding-left:1rem;display:flex;flex-direction:column;gap:.75rem}
+.loc-head{display:flex;justify-content:space-between;align-items:baseline;font-weight:600}
+.result{border-top:1px solid var(--line);padding-top:1.25rem;display:flex;flex-direction:column;gap:1rem}
+.actions{display:flex;flex-direction:column;gap:.6rem}
+.raw summary{cursor:pointer;color:var(--muted)}
+.raw p{color:var(--muted);font-size:.9rem}
+.raw code{font-size:.85em}
+.raw textarea{font:.8rem/1.4 ui-monospace,Menlo,Consolas,monospace;word-break:break-all;margin-bottom:.6rem}
+</style>
 </head>
 <body>
-  <header class="nav">
-    <div class="wrap navin">
-      <a class="brand" href="#top" aria-label="Stembridge">
-        <img alt="Stembridge" src="https://static.tildacdn.net/tild3066-6263-4732-a531-363862323534/Logo-2_webpage_icon.png"/>
-        <div>
-          <strong>Stembridge</strong><div class="small">Vilnius, Lithuania</div>
-        </div>
-      </a>
-      <nav class="navlinks" aria-label="Navigation">
-        <a href="#why">Why this</a>
-        <a href="#format">Format</a>
-        <a href="#roundtables">Roundtables</a>
-        <a href="#agenda">Agenda</a>
-        <a href="#edtech">EdTech demos</a>
-      </nav>
-      <button class="btn primary" data-open-modal>
-        <span class="dot"></span>Apply / Join
-      </button>
-    </div>
-  </header>
+<main id="app"></main>
+<script type="application/json" id="quest-data">
+{"v":1,"salt":"Br+nS4vZw5WU7VEc+3Orlw==","title":"Мамочке с днём рождения! :)","intro":"Традиционный днерожденный квест теперь у тебя в телефоне! Найди место. Найди записку. Введи код — откроется следующая загадка.","start":{"q":"Вокруг - мокро, но внутри всегда сухо. Найдёшь - озолотишься! ;-)","hint":"И нет, это не в ванной. ))"},"steps":[{"iv":"ibhKcPRAHiu8oT6P","ct":"jf4dlivTr4o1kty+C3I0GMHJYsBemIK38tCrDo4v/Ai6yMe/vOFFXnRxvuVlAVWh5IH4YaWZ3+RAOEpGlDKei83Uecrk2DS/RJMa84WXzv8tKUJXM9cQEZ5e+PyFli73C+5mYcqvrLFS7LhCY6D7IwUQ/uJ9n3eGyTHAYsU6mcGRG4kwLmCxYrBdhFPW6kmBfd+UXQ7YFeJ6bmyFiOah4+vttkyxDU65b7PovNMUjLFo/Lfx/Ht+FzSyP28MEpLk9iIj4QSaNlhdboXEtTn5MpUqcDPIbyfoh8wGUItLlyq2bb8riDDahgypeR3BMyR32ISoFbQ="},{"iv":"QEirM9Ek6IrEGpEE","ct":"NyW8Tha7xN+WAwmzZzfr4GjE5iqQ56WKx0644FMnKTTtjPkRDfpnaGWT6sK2mnOkASvsX33gKUTHm4xYgHDN9SpFzEwlyNquAw4jz55AS7LNin1sHiIfXJTcTu8ZIIMXRTaSB48dJzQ2n3Sgq71WAAQztgg="},{"iv":"JMOQ1dM4zGl75mCS","ct":"gswEH2s+Ud/p4gjV0K0fC+1+u6JJl4Jn6mHDUdd6PQcQoDgRDaCulyUWsP0YzVZGIH+qUGdJizXgxn2eXGd/CIQ1LLlYfWa6Ch7yXIWKQgmWxiTGREDN/Yt+7/zIcvlLj2Feb0mM7iNYzWBh+OYu33kDBRfpgNEJFtMFIuqeCT54bQ=="},{"iv":"1KcRw8gk6qv8aLch","ct":"5XK1HGpN0mQ6EKngiwPbws1DlUCNUR94m1siyXpwpOjixozCSEoUp9nO5DME2IxqAXuSMtPy+CkofwR5dzljlVLgU3y7icpupAmGUX0z3qYjiCMNNPufTVE56VWd05mGZk7dCFmc0GQj1oeyMFw3bS8iSLpYiIsecX4DzSA8Y5V/KyPe7qaj6CatBRzODPfU4m7FwSSBpHm/PeLhvVyR7+aLvOlMrs9s6LC2tSsfh6iJfXtRuOBtMh1r75eoswGuO+6LfPBADX7eBvuhYz30TKdkmqHnxGXbhj0="}]}
+</script>
+<script>
+(() => {
+'use strict';
 
-  <main id="top">
-    <section class="hero">
-      <div class="wrap herogrid">
-        <div>
-          <span class="pill">One-day conference • <b>Vilnius</b> • <b>April 25, 2026</b></span>
-          <h1><span class="accent">AI in School:</span> Practice, Dialogue & Real Implementation</h1>
-          <div class="sub">A practitioner‑led dialogue on what AI should look like in real schools — where it helps learning, where it fails, and what we need to change (assessment, teaching, governance) to make it work.</div>
-          <div class="heroactions">
-            <button class="btn primary" data-open-modal><span class="dot"></span>Apply to attend</button>
-            <a class="btn" href="#roundtables">See roundtables</a>
-            <a class="btn" href="#edtech">EdTech participation</a>
-          </div>
-        </div>
+/* CRYPTO-BEGIN */
+const te = new TextEncoder(), td = new TextDecoder();
+const toB64 = buf => btoa(String.fromCharCode(...new Uint8Array(buf)));
+const fromB64 = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
+const normalizeCode = s => String(s || '').normalize('NFC').toUpperCase().replace(/[\s\-_.]/g, '').replace(/Ё/g, 'Е');
+const PBKDF2_ITER = 60000;
+async function deriveKey(code, saltB64) {
+  const base = await crypto.subtle.importKey('raw', te.encode(normalizeCode(code)), 'PBKDF2', false, ['deriveKey']);
+  return crypto.subtle.deriveKey(
+    { name: 'PBKDF2', hash: 'SHA-256', salt: fromB64(saltB64), iterations: PBKDF2_ITER },
+    base, { name: 'AES-GCM', length: 256 }, false, ['encrypt', 'decrypt']);
+}
+async function encryptStep(obj, code, saltB64) {
+  const key = await deriveKey(code, saltB64);
+  const iv = crypto.getRandomValues(new Uint8Array(12));
+  const ct = await crypto.subtle.encrypt({ name: 'AES-GCM', iv }, key, te.encode(JSON.stringify(obj)));
+  return { iv: toB64(iv), ct: toB64(ct) };
+}
+async function decryptStep(step, code, saltB64) {
+  try {
+    const key = await deriveKey(code, saltB64);
+    const pt = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: fromB64(step.iv) }, key, fromB64(step.ct));
+    return JSON.parse(td.decode(pt));
+  } catch (e) { return null; }
+}
+const newSalt = () => toB64(crypto.getRandomValues(new Uint8Array(16)));
+/* CRYPTO-END */
 
-        <aside class="card meta" aria-label="Event details">
-          <div class="row"><div class="k">Date</div><div class="v"><b>Saturday, April 25, 2026</b></div></div>
-          <div class="row"><div class="k">Time</div><div class="v">10:00–17:00 (doors 09:30)</div></div>
-          <div class="row"><div class="k">Place</div><div class="v">Stembridge School, Nemenčinės pl. 48, Vilnius 10104</div></div>
-          <div class="row"><div class="k">Audience</div><div class="v">School leaders & teachers • Parents • EdTech • Government</div></div>
-          <div class="row"><div class="k">Language</div><div class="v">English + Lithuanian segments</div></div>
-          <div class="row"><div class="k">Goal</div><div class="v">Make AI in schools less hype, more learning science & practice.</div></div>
-        </aside>
-      </div>
-    </section>
+/* DEMO-BEGIN */
+const demoDraft = () => ({
+  title: 'Демо-квест',
+  intro: 'Прочитай загадку, догадайся, о каком месте речь, и найди там записку с кодом. Введи код — откроется следующая загадка.',
+  locs: [
+    { q: 'Там всегда холодно, но еда от этого только рада. Загляни на нижнюю полку.', hint: 'Оно гудит на кухне.', code: '2741' },
+    { q: 'Здесь стоят те, кого давно не открывали, и терпеливо ждут своей очереди.', hint: 'Корешки, страницы, пыль.', code: '8153' },
+    { q: 'Оно показывает тебя, но никогда не смотрит в ответ.', hint: 'Висит в прихожей или в ванной.', code: '6099' }
+  ],
+  final: 'Все записки найдены — квест пройден! Чтобы собрать свой, добавь #builder к адресу этой страницы.'
+});
+/* DEMO-END */
 
-    <section id="why" class="section">
-      <div class="wrap">
-        <h2>Why we’re doing this</h2>
-        <p>AI is already in students’ pockets and classrooms — whether schools are ready or not. The real question is not “AI or not ”, but <b>what role AI should play</b> so it strengthens education rather than undermines it.</p>
-
-        <div class="grid3">
-          <div class="card">
-            <div class="tag"><span class="sq"></span>Evidence over hype</div>
-            <p>We focus on what has been tried in real schools: what worked, what didn’t, and what needs better evaluation.</p>
-          </div>
-          <div class="card">
-            <div class="tag"><span class="sq"></span>Teacher‑centred change</div>
-            <p>AI changes workflows, attention, assessment, and classroom culture. We want honest conversations about teacher roles, fears, and new skills.</p>
-          </div>
-          <div class="card">
-            <div class="tag"><span class="sq"></span>Governance & trust</div>
-            <p>Data protection, student safety, fairness, and regulation (EU + national) are part of the design — not an afterthought.</p>
-          </div>
-        </div>
-
-        <div class="banner">
-          <div><b>Want to contribute as a speaker/panelist?</b><div class="small">We welcome researchers, school leaders, teacher‑practitioners, and policy voices.</div></div>
-          <button class="btn primary" data-open-modal><span class="dot"></span>Apply / propose a topic</button>
-        </div>
-      </div>
-    </section>
-
-    <section id="format" class="section">
-      <div class="wrap">
-        <h2>Format</h2>
-        <p>One concentrated day, designed to generate real conversations and actionable contacts for schools, teachers, parents, and EdTech teams.</p>
-
-        <div class="grid2">
-          <div class="card">
-            <div class="tag"><span class="sq"></span>Keynote + panels</div>
-            <ul>
-              <li>AI-supported learning and its real impact on outcomes</li>
-              <li>Assessment and academic integrity in the generative AI age</li>
-              <li>The changing role of the teacher</li>
-              <li>Responsible implementation at school and system level</li>
-            </ul>
-          </div>
-          <div class="card">
-            <div class="tag"><span class="sq"></span>Roundtables + demos</div>
-            <ul>
-              <li>4 parallel roundtables (parents / teachers / school leaders / EdTech)</li>
-              <li>EdTech demo stations with timed slots for hands‑on trials</li>
-              <li>Structured networking (intro prompts + contact exchange)</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="roundtables" class="section">
-      <div class="wrap">
-        <h2>Roundtables (small groups)</h2>
-        <p>Each roundtable is moderated, capped (to keep it real), and produces a 1‑page “what we learned” summary shared with all participants.</p>
-
-        <div class="grid2">
-          <div class="card">
-            <div class="tag"><span class="sq"></span>Parents</div>
-            <b>Homework with AI: helpful or harmful?</b>
-            <ul>
-              <li>Where AI helps practice vs replaces thinking</li>
-              <li>What to ask kids / how to spot shallow understanding</li>
-              <li>Family rules that reduce conflict and cheating</li>
-            </ul>
-          </div>
-          <div class="card">
-            <div class="tag"><span class="sq"></span>Teachers</div>
-            <b>AI‑Supported Teaching: how is the role of teachers changing?</b>
-            <ul>
-              <li>New routines: feedback, scaffolding, tutoring</li>
-              <li>Teacher fears: loss of control, workload, trust</li>
-              <li>What teacher training should look like in 2026</li>
-            </ul>
-          </div>
-          <div class="card">
-            <div class="tag"><span class="sq"></span>School leaders</div>
-            <b>Freedom to innovate: managing the risks and benefits of AI</b>
-            <ul>
-              <li>Guardrails: tools, policies, data and privacy</li>
-              <li>When to pilot, when to scale, when to stop</li>
-              <li>How to communicate with parents and regulators</li>
-            </ul>
-          </div>
-          <div class="card">
-            <div class="tag"><span class="sq"></span>EdTech startups</div>
-            <b>From pilot to procurement: what schools actually need to adopt AI</b>
-            <ul>
-              <li>What evidence schools will accept (and why)</li>
-              <li>Implementation realities: training, support, integration</li>
-              <li>How to design pilots that lead to adoption in the Baltics</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="agenda" class="section">
-      <div class="wrap">
-        <h2>Draft agenda (10:00–17:00)</h2>
-        <p>Times are indicative. The final version depends on speakers and participating schools.</p>
-
-        <div class="agenda">
-          <div class="slot"><div class="time">09:30</div><div><strong>Arrival & coffee</strong></div></div>
-          <div class="slot"><div class="time">10:00</div><div><strong>Opening</strong></div></div>
-          <div class="slot"><div class="time">10:15</div><div><strong>Keynote and Panels #1</strong></div></div>
-          <div class="slot"><div class="time">12:00</div><div><strong>EdTech demo block</strong></div></div>
-          <div class="slot"><div class="time">13:00</div><div><strong>Lunch</strong></div></div>
-          <div class="slot"><div class="time">14:00</div><div><strong>Keynote and Panels #2</strong></div></div>
-          <div class="slot"><div class="time">15:30</div><div><strong>Roundtables (parallel, 60 min)</strong></div></div>
-          <div class="slot"><div class="time">16:30</div><div><strong>Closing: what we learned + next steps</strong></div></div>
-          <div class="slot"><div class="time">17:00</div><div><strong>End</strong></div></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="edtech" class="section">
-      <div class="wrap">
-        <h2>EdTech startups: how to participate</h2>
-        <p>We’re inviting EdTech innovators at every stage — from emerging startups to established growth companies — to present their solutions and engage in meaningful dialogue about what schools in the Baltics actually need to adopt AI responsibly and at scale.</p>
-
-        <div class="grid2">
-          <div class="card">
-            <div class="tag"><span class="sq"></span>Demo stations</div>
-            <p><b>Dedicated time slots</b> where participants can try your product hands‑on (laptops provided by startups; tables + power by organizers).</p>
-            <ul>
-              <li>Short “what problem you solve” intro (2 min)</li>
-              <li>10–12 min guided demo</li>
-              <li>QR feedback form from participants</li>
-            </ul>
-          </div>
-          <div class="card">
-            <div class="tag"><span class="sq"></span>EdTech roundtable</div>
-            <p>A moderated discussion on <b>pilots, evidence, school procurement</b>, and what it takes to scale in real school environments.</p>
-            <ul>
-              <li>Share your pilot design</li>
-              <li>Hear friction points from schools</li>
-              <li>Meet potential partners</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="banner">
-          <div><b>EdTech teams:</b> apply for a demo station or the roundtable.<div class="small">We will confirm slots and practical requirements by email.</div></div>
-          <button class="btn primary" data-open-modal><span class="dot"></span>Apply as EdTech</button>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="wrap footgrid">
-        <div>
-          <h2>About Stembridge</h2>
-          <p>Stembridge is a private school in Vilnius. We’re building “AI‑native” learning routines and want to test them responsibly — with teachers, parents, and regulators in the room.</p>
-          <div class="heroactions" style="margin-top:14px">
-            <button class="btn primary" data-open-modal><span class="dot"></span>Register / contact</button>
-            <a class="btn" href="mailto:hello@stembridge.lt">Email: hello@stembridge.lt</a>
-          </div>
-        </div>
-        <div class="miniimg" aria-label="School image">
-          <img alt="Stembridge photo" src="https://static.tildacdn.net/tild3932-6662-4061-b762-326532623132/IMG_1429.JPEG"/>
-        </div>
-      </div>
-    </section>
-
-    <footer class="foot">
-      <div class="wrap">
-        <div class="small">© Stembridge School • Vilnius • AI‑Native School • April 25, 2026</div>
-      </div>
-    </footer>
-  </main>
-
-  <!-- Modal -->
-  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Registration form">
-    <button class="x" aria-label="Close" data-close-modal>✕</button>
-    <div class="modalbox" role="document">
-      <div class="modalimg" aria-hidden="true"></div>
-      <div class="modalcontent">
-        <h3>Register interest</h3>
-        <div class="small">Tell us who you are and how you’d like to participate (attendee / speaker / EdTech).</div>
-
-        <form class="form" onsubmit="return submitForm(event)">
-          <input class="in" name="name" placeholder="Name" required/>
-          <input class="in" type="email" name="email" placeholder="Email" required/>
-          <input class="in" name="org" placeholder="School / company / role"/>
-          <select class="in" name="track">
-            <option value="attendee">I want to attend</option>
-            <option value="speaker">I want to speak / join a panel</option>
-            <option value="edtech">We are an EdTech startup</option>
-            <option value="partner">I might support / partner</option>
-          </select>
-          <textarea class="in" name="msg" rows="4" placeholder="Optional: what topic or what you’d like to demo"></textarea>
-          <button class="btn primary" type="submit"><span class="dot"></span>Send</button>
-          <div class="note">This demo form stores nothing. Replace <code>submitForm()</code> with your CRM / Google Form / Tilda form endpoint.</div>
-        </form>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    const modal = document.getElementById('modal');
-    function openModal(){ modal.classList.add('open'); document.body.style.overflow='hidden'; }
-    function closeModal(){ modal.classList.remove('open'); document.body.style.overflow=''; }
-
-    document.querySelectorAll('[data-open-modal]').forEach(b => b.addEventListener('click', openModal));
-    document.querySelectorAll('[data-close-modal]').forEach(b => b.addEventListener('click', closeModal));
-    modal.addEventListener('click', (e)=>{ if(e.target === modal) closeModal(); });
-    document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeModal(); });
-
-    function submitForm(e){
-      e.preventDefault();
-      const fd = new FormData(e.target);
-      const payload = Object.fromEntries(fd.entries());
-      // Replace the line below with your submission logic.
-      alert("Thanks! We'll get back to you shortly.\n\n" + JSON.stringify(payload, null, 2));
-      e.target.reset();
-      closeModal();
-      return false;
+const app = document.getElementById('app');
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const shortUrl = u => { const t = u.replace(/^https?:\/\//i, ''); return t.length > 44 ? t.slice(0, 40) + '…' : t; };
+const link = (href, text) => `<a href="${esc(href)}" target="_blank" rel="noopener">${esc(text)}</a>`;
+// Экранирует текст и делает ссылки кликабельными: [подпись](https://…) — ссылка с подписью,
+// голые http(s):// и www. — сами по себе. Работает по сырому тексту, чтобы не путаться в HTML-сущностях.
+const LINK_RE = /\[([^\]\n]+)\]\(((?:https?:\/\/|www\.)[^\s)]+)\)|(^|[\s(«„"'])((?:https?:\/\/|www\.)[^\s<>"'»]+)/gi;
+const abs = u => /^www\./i.test(u) ? 'https://' + u : u;
+const linkify = raw => {
+  let out = '', i = 0, m;
+  LINK_RE.lastIndex = 0;
+  while ((m = LINK_RE.exec(raw))) {
+    out += esc(raw.slice(i, m.index));
+    if (m[1]) out += link(abs(m[2]), m[1]);
+    else {
+      const tail = /[.,;:!?)“”]+$/.exec(m[4]);
+      const core = tail ? m[4].slice(0, -tail[0].length) : m[4];
+      out += esc(m[3]) + link(abs(core), shortUrl(core)) + esc(tail ? tail[0] : '');
     }
-  </script>
-</body>
-</html>
+    i = m.index + m[0].length;
+  }
+  return out + esc(raw.slice(i));
+};
+const nl = s => linkify(String(s ?? '')).replace(/\n/g, '<br>');
+const store = {
+  get(k) { try { return JSON.parse(localStorage.getItem(k) || 'null'); } catch (e) { return null; } },
+  set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} },
+  del(k) { try { localStorage.removeItem(k); } catch (e) {} }
+};
+const plural = (n, one, few, many) => {
+  const m10 = n % 10, m100 = n % 100;
+  return (m10 === 1 && m100 !== 11) ? one : (m10 >= 2 && m10 <= 4 && (m100 < 10 || m100 >= 20)) ? few : many;
+};
+
+let data = (() => { try { return JSON.parse(document.getElementById('quest-data').textContent); } catch (e) { return null; } })();
+let testing = false;
+const pKey = () => 'quest:progress:' + (data && data.salt);
+const hasCrypto = () => !!(window.crypto && crypto.subtle);
+
+// ---------- participant flow ----------
+
+async function restore() {
+  const saved = store.get(pKey());
+  if (!saved || !Array.isArray(saved.codes)) return { started: false, idx: 0, current: data.start, finalText: null };
+  let current = data.start, finalText = null, i = 0;
+  for (const code of saved.codes) {
+    if (i >= data.steps.length) break;
+    const r = await decryptStep(data.steps[i], code, data.salt);
+    if (!r) break;
+    i++;
+    if (r.final !== undefined) { finalText = r.final; break; }
+    current = r;
+  }
+  return { started: true, idx: i, current, finalText };
+}
+
+function notice(title, text) {
+  return `<section class="screen"><div class="grow"><h1>${esc(title)}</h1><p class="intro">${esc(text)}</p></div>
+    <p class="foot"><a href="#builder">Для организатора</a></p></section>`;
+}
+
+async function boot() {
+  if (!data || !Array.isArray(data.steps) || !data.steps.length) { app.innerHTML = notice('Квест пока пустой', 'Открой раздел для организатора и заполни вопросы.'); return; }
+  if (!hasCrypto()) { app.innerHTML = notice('Нужно защищённое соединение', 'Открой страницу по адресу с https:// — иначе браузер не сможет проверять коды.'); return; }
+  if (data.title) document.title = data.title;
+  const st = await restore();
+  if (st.finalText !== null) renderFinal(st.finalText, false);
+  else if (st.started) renderPlay(st.idx, st.current, false);
+  else renderStart();
+}
+
+function testBanner() {
+  return testing ? '<p class="banner">Режим проверки — квест ещё не сохранён. <a href="#builder">Вернуться к сборке</a></p>' : '';
+}
+
+function renderStart() {
+  app.innerHTML = `
+  <section class="screen start">
+    ${testBanner()}
+    <div class="grow">
+      <h1>${esc(data.title || 'Квест')}</h1>
+      ${data.intro ? `<p class="intro">${nl(data.intro)}</p>` : ''}
+    </div>
+    <button class="btn btn-primary" id="start">Начать</button>
+  </section>`;
+  app.querySelector('#start').onclick = () => { store.set(pKey(), { started: true, codes: [] }); renderPlay(0, data.start, true); };
+}
+
+function rail(idx, n) {
+  return Array.from({ length: n }, (_, i) => `<i class="${i < idx ? 'done' : i === idx ? 'now' : ''}"></i>`).join('');
+}
+
+function renderPlay(idx, current, reveal) {
+  const n = data.steps.length;
+  app.innerHTML = `
+  <section class="screen play">
+    ${testBanner()}
+    <header class="progress"><span>Место ${idx + 1} из ${n}</span><div class="rail" aria-hidden="true">${rail(idx, n)}</div></header>
+    <div class="grow${reveal ? ' reveal' : ''}">
+      <p class="question">${nl(current.q)}</p>
+      ${current.hint ? `<details class="hint"><summary>Подсказка</summary><p>${nl(current.hint)}</p></details>` : ''}
+    </div>
+    <div class="entry">
+      <label for="code">Код с записки</label>
+      <input id="code" class="code-input" type="text" inputmode="text" autocomplete="off" autocapitalize="characters" autocorrect="off" spellcheck="false" enterkeyhint="go" maxlength="24">
+      <p class="msg" id="msg" role="status"></p>
+      <button class="btn btn-primary" id="check">Открыть</button>
+    </div>
+    <p class="foot"><button class="btn-link" id="reset">Начать сначала</button></p>
+  </section>`;
+  const input = app.querySelector('#code'), msg = app.querySelector('#msg'), btn = app.querySelector('#check');
+  let busy = false;
+  async function check() {
+    if (busy) return;
+    const code = input.value;
+    if (!normalizeCode(code)) { msg.textContent = 'Введи код с записки.'; msg.className = 'msg'; input.focus(); return; }
+    busy = true; btn.disabled = true; msg.textContent = 'Проверяю…'; msg.className = 'msg';
+    const r = await decryptStep(data.steps[idx], code, data.salt);
+    busy = false; btn.disabled = false;
+    if (!r) {
+      msg.textContent = 'Код не подошёл. Проверь записку и попробуй ещё раз.'; msg.className = 'msg bad';
+      input.classList.remove('shake'); void input.offsetWidth; input.classList.add('shake'); input.select();
+      return;
+    }
+    const saved = store.get(pKey()) || { started: true, codes: [] };
+    saved.codes = (saved.codes || []).slice(0, idx); saved.codes.push(normalizeCode(code)); store.set(pKey(), saved);
+    if (r.final !== undefined) renderFinal(r.final, true); else renderPlay(idx + 1, r, true);
+  }
+  btn.onclick = check;
+  input.addEventListener('keydown', e => { if (e.key === 'Enter') { e.preventDefault(); check(); } });
+  app.querySelector('#reset').onclick = () => { if (confirm('Сбросить прогресс и начать квест сначала?')) { store.del(pKey()); renderStart(); } };
+}
+
+function renderFinal(text, reveal) {
+  const n = data.steps.length;
+  app.innerHTML = `
+  <section class="screen final">
+    ${testBanner()}
+    <header class="progress"><span>Все ${n} ${plural(n, 'место найдено', 'места найдены', 'мест найдены')}</span><div class="rail" aria-hidden="true">${rail(n, n)}</div></header>
+    <div class="grow${reveal ? ' reveal' : ''}"><p class="question">${nl(text)}</p></div>
+    <p class="foot"><button class="btn-link" id="again">Пройти ещё раз</button></p>
+  </section>`;
+  app.querySelector('#again').onclick = () => { store.del(pKey()); renderStart(); };
+}
+
+// ---------- organizer: builder ----------
+
+const DKEY = 'quest:builder:draft';
+let draft = null, built = null, builtHtml = null, saveTimer = null;
+
+function loadDraft() {
+  const d = store.get(DKEY);
+  if (d && Array.isArray(d.locs) && d.locs.length) {
+    return { title: d.title || '', intro: d.intro || '', final: d.final || '',
+      locs: d.locs.map(l => ({ q: l.q || '', hint: l.hint || '', code: l.code || '' })) };
+  }
+  return demoDraft();
+}
+function saveDraft() { clearTimeout(saveTimer); saveTimer = setTimeout(() => store.set(DKEY, draft), 300); }
+
+function goPlay() { history.replaceState(null, '', location.pathname + location.search); boot(); }
+
+function renderBuilder() {
+  draft = loadDraft(); built = null; builtHtml = null;
+  app.innerHTML = `
+  <section class="screen builder">
+    <div>
+      <h1>Собрать квест</h1>
+      <p class="lead">Первая загадка видна сразу. Каждая следующая зашифрована кодом предыдущего места — без записки её не прочитать даже в исходнике страницы. Ссылки в тексте станут кликабельными; чтобы дать ссылке подпись, пиши [подпись](https://…). Участники этот экран не видят: чтобы открыть его снова, добавь #builder к адресу страницы.</p>
+    </div>
+    <label class="field"><span>Название</span><input id="b-title" value="${esc(draft.title)}"></label>
+    <label class="field"><span>Вступление</span><textarea id="b-intro" rows="3">${esc(draft.intro)}</textarea></label>
+    <ol class="locs" id="b-locs"></ol>
+    <button class="btn btn-secondary" id="b-add">Добавить место</button>
+    <label class="field"><span>Финальное сообщение</span><textarea id="b-final" rows="3">${esc(draft.final)}</textarea></label>
+    <button class="btn btn-primary" id="b-build">Собрать квест</button>
+    <p class="msg" id="b-msg" role="status"></p>
+    <div class="result" id="b-result" hidden>
+      <p class="ok" id="b-ok"></p>
+      <div class="actions">
+        <button class="btn btn-secondary" id="b-test">Проверить здесь</button>
+        <button class="btn btn-primary" id="b-publish" hidden>Опубликовать по этой ссылке</button>
+        <button class="btn btn-secondary" id="b-download">Скачать quest.html</button>
+      </div>
+      <details class="raw"><summary>Данные квеста для ручной вставки в файл</summary>
+        <p>Замени содержимое блока <code>&lt;script id="quest-data"&gt;</code> в quest.html на этот текст.</p>
+        <textarea id="b-json" rows="6" readonly></textarea>
+        <button class="btn btn-secondary" id="b-copy">Скопировать</button>
+      </details>
+    </div>
+    <p class="foot"><a href="#" id="b-back">К квесту</a></p>
+  </section>`;
+  renderLocs();
+  const sec = app.querySelector('.builder');
+  const bmsg = app.querySelector('#b-msg');
+  const say = (t, bad) => { bmsg.textContent = t; bmsg.className = bad ? 'msg bad' : 'msg'; };
+
+  sec.addEventListener('input', e => {
+    const el = e.target;
+    if (el.dataset && el.dataset.f !== undefined) { const l = draft.locs[+el.dataset.i]; if (l) l[el.dataset.f] = el.value; }
+    else if (el.id === 'b-title') draft.title = el.value;
+    else if (el.id === 'b-intro') draft.intro = el.value;
+    else if (el.id === 'b-final') draft.final = el.value;
+    saveDraft();
+  });
+  sec.addEventListener('click', e => {
+    const rm = e.target.closest('[data-rm]');
+    if (rm) { draft.locs.splice(+rm.dataset.rm, 1); saveDraft(); renderLocs(); }
+  });
+  app.querySelector('#b-add').onclick = () => {
+    draft.locs.push({ q: '', hint: '', code: '' }); saveDraft(); renderLocs();
+    const last = app.querySelector('#b-locs li:last-child textarea'); if (last) last.focus();
+  };
+  app.querySelector('#b-back').onclick = e => { e.preventDefault(); goPlay(); };
+  app.querySelector('#b-build').onclick = () => build(say);
+  app.querySelector('#b-test').onclick = () => { if (!built) return; data = built; testing = true; store.del(pKey()); goPlay(); };
+  app.querySelector('#b-download').onclick = () => download(say);
+  app.querySelector('#b-copy').onclick = () => copyJson(say);
+  setupPublish(say);
+  if (!hasCrypto()) say('Нужен адрес с https:// — иначе браузер не даст зашифровать вопросы.', true);
+}
+
+function renderLocs() {
+  const ol = app.querySelector('#b-locs');
+  if (!ol) return;
+  ol.innerHTML = draft.locs.map((l, i) => `
+    <li class="loc">
+      <div class="loc-head"><span>Место ${i + 1}</span>${draft.locs.length > 1 ? `<button class="btn-link" data-rm="${i}">Убрать</button>` : ''}</div>
+      <label class="field"><span>Загадка про место</span><textarea rows="2" data-i="${i}" data-f="q">${esc(l.q)}</textarea></label>
+      <label class="field"><span>Подсказка, если застрянут (необязательно)</span><input data-i="${i}" data-f="hint" value="${esc(l.hint)}"></label>
+      <label class="field"><span>Код на записке в этом месте</span><input data-i="${i}" data-f="code" value="${esc(l.code)}" autocapitalize="characters" autocomplete="off" spellcheck="false"></label>
+    </li>`).join('');
+}
+
+function composeHtml(obj) {
+  const clone = document.documentElement.cloneNode(true);
+  clone.querySelector('#app').innerHTML = '';
+  clone.querySelector('#quest-data').textContent = '\n' + JSON.stringify(obj).replace(/</g, '\\u003c') + '\n';
+  const t = clone.querySelector('title'); if (t && obj.title) t.textContent = obj.title;
+  return '<!DOCTYPE html>\n' + clone.outerHTML + '\n';
+}
+
+async function build(say) {
+  if (!hasCrypto()) { say('Нужен адрес с https:// — иначе браузер не даст зашифровать вопросы.', true); return; }
+  const locs = draft.locs;
+  const problems = [];
+  if (!locs.length) problems.push('Добавь хотя бы одно место.');
+  const seen = new Map();
+  locs.forEach((l, i) => {
+    if (!l.q.trim()) problems.push(`Место ${i + 1}: нет загадки.`);
+    const c = normalizeCode(l.code);
+    if (!c) problems.push(`Место ${i + 1}: нет кода.`);
+    else if (seen.has(c)) problems.push(`Место ${i + 1}: код совпадает с местом ${seen.get(c) + 1}.`);
+    seen.set(c, i);
+  });
+  if (problems.length) { say(problems.join(' '), true); return; }
+  say('Шифрую…');
+  const salt = newSalt(), steps = [];
+  for (let i = 0; i < locs.length; i++) {
+    const payload = i < locs.length - 1
+      ? { q: locs[i + 1].q.trim(), hint: locs[i + 1].hint.trim() }
+      : { final: draft.final.trim() || 'Квест пройден!' };
+    steps.push(await encryptStep(payload, locs[i].code, salt));
+  }
+  built = { v: 1, salt, title: draft.title.trim(), intro: draft.intro.trim(), start: { q: locs[0].q.trim(), hint: locs[0].hint.trim() }, steps };
+  builtHtml = composeHtml(built);
+  say('');
+  const result = app.querySelector('#b-result');
+  result.hidden = false;
+  app.querySelector('#b-ok').textContent = `Готово: ${locs.length} ${plural(locs.length, 'место', 'места', 'мест')}, файл ${(builtHtml.length / 1024).toFixed(0)} КБ.`;
+  app.querySelector('#b-json').value = JSON.stringify(built);
+  result.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+const hasRuntime = () => !!(window.claude && typeof window.claude.use === 'function');
+
+async function setupPublish(say) {
+  if (!hasRuntime()) return;
+  let art = null;
+  try { art = await window.claude.use('artifact'); } catch (e) { art = null; }
+  const btn = app.querySelector('#b-publish');
+  if (!art || !btn) return;
+  btn.hidden = false;
+  btn.onclick = async () => {
+    if (!builtHtml) return;
+    btn.disabled = true; say('Публикую…');
+    try { await art.publish(builtHtml); say('Опубликовано — страница сейчас обновится.'); }
+    catch (e) {
+      const c = e && e.code;
+      say(c === 'not_writer' || c === 'not_granted' ? 'Публиковать может только владелец этой страницы.'
+        : c === 'conflict' ? 'Параллельно опубликована другая версия — обнови страницу и повтори.'
+        : 'Не удалось опубликовать' + (c ? ': ' + c : '.'), true);
+      btn.disabled = false;
+    }
+  };
+}
+
+async function download(say) {
+  if (!builtHtml) return;
+  if (hasRuntime()) {
+    let dl = null;
+    try { dl = await window.claude.use('downloads'); } catch (e) { dl = null; }
+    if (!dl) { say('Скачивание здесь недоступно — скопируй данные квеста ниже.', true); return; }
+    try { await dl.save({ filename: 'quest.html', data: builtHtml }); say('Файл сохранён.'); }
+    catch (e) { if (e && e.code === 'declined') say(''); else say('Скачать не удалось — скопируй данные квеста ниже.', true); }
+    return;
+  }
+  const blob = new Blob([builtHtml], { type: 'text/html' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob); a.download = 'quest.html';
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+}
+
+async function copyJson(say) {
+  const ta = app.querySelector('#b-json');
+  ta.focus(); ta.select();
+  try { await navigator.clipboard.writeText(ta.value); say('Скопировано.'); }
+  catch (e) {
+    try { if (document.execCommand('copy')) { say('Скопировано.'); return; } } catch (e2) {}
+    say('Выдели текст и скопируй вручную.');
+  }
+}
+
+// ---------- routing ----------
+
+function route() { if (location.hash === '#builder') renderBuilder(); else boot(); }
+window.addEventListener('hashchange', route);
+route();
+})();
+</script>
+
+
+</body></html>
